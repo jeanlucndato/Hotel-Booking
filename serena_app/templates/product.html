@@ -1,0 +1,83 @@
+{% load static %}
+{% include 'head.html' %}
+{% include 'navbar.html' %}
+
+<!--================Breadcrumb Area =================-->
+
+
+
+<section class="breadcrumb_area blog_banner_two">
+    <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
+    <div class="container">
+        <div class="page-cover text-center">
+            <h2 class="page-cover-tittle f_48">{{ product.category }}</h2>
+            <ol class="breadcrumb">
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </ol>
+        </div>
+    </div>
+</section>
+<!--================Breadcrumb Area =================-->
+
+<!--================Blog Area =================-->
+
+<!-- Post Content-->
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <br><br>
+
+                <img src="{{ product.image.url }}" class="img-fluid">
+                <br>
+                <hr>
+            </div>
+
+            <div class="col-lg-9 col-md-9 blog_details">
+                <h2>{{ product.name }}</h2>
+                <p class="excert">
+                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you
+                    should
+                    have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                    fraction.
+                </p>
+                <p>
+                    Boot camps have its supporters and its detractors. Some people do not understand why you should
+                    have to
+                    spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the
+                    camp
+                    price. However, who has the willpower to actually sit through a self-imposed MCSE training. who
+                    has the
+                    willpower to actually sit through a self-imposed
+                </p>
+                <p>
+                    Boot camps have its supporters and its detractors. Some people do not understand why you should
+                    have to
+                    spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the
+                    camp
+                    price. However, who has the willpower to actually sit through a self-imposed MCSE training. who
+                    has the
+                    willpower to actually sit through a self-imposed
+                </p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</article>
+
+<hr>
+<br>
+
+
+
+
+<!--================Blog Area =================-->
+
+
+
+<!--================ start footer Area  =================-->
+
+{% include 'footer.html' %}

@@ -42,7 +42,9 @@ Table of Content:
 /*Color Variables*/
 /*=================== fonts ====================*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
-.col-md-offset-right-1, .col-lg-offset-right-1 {
+
+.col-md-offset-right-1,
+.col-lg-offset-right-1 {
   margin-right: 8.33333333%;
 }
 
@@ -61,7 +63,8 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
   outline: none;
 }
@@ -94,7 +97,12 @@ section {
   background: #fff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
@@ -348,7 +356,8 @@ button:focus {
   display: none;
 }
 
-.navbar .menu_nav .nav-item:hover .nav-link, .navbar .menu_nav .nav-item.active .nav-link {
+.navbar .menu_nav .nav-item:hover .nav-link,
+.navbar .menu_nav .nav-item.active .nav-link {
   color: #52c5fd;
 }
 
@@ -450,7 +459,7 @@ button:focus {
   margin-top: 0px;
 }
 
-.navbar .menu_nav .nav-item + li {
+.navbar .menu_nav .nav-item+li {
   margin-left: 30px;
 }
 
@@ -669,7 +678,7 @@ button:focus {
   color: #fff;
 }
 
-.breadcrumb li + li:before {
+.breadcrumb li+li:before {
   content: "\e87a";
   font-family: 'Linearicons-Free';
   font-size: 14px;
@@ -716,7 +725,11 @@ button:focus {
   background: url(../image/banner/banner-2.jpg) no-repeat scroll center top/cover;
 }
 
-/*=============End Blog Banner css =============*/
+/*=============End Blog Banner css =============*
+.blog_banner_two .bg-parallax {
+  background: url(../image/banner/banner-2.jpg) no-repeat scroll center top/cover;
+}
+/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .accomodation_item {
@@ -961,7 +974,7 @@ button:focus {
   background: #f3c300;
 }
 
-.tags .tag_btn + .tag_btn {
+.tags .tag_btn+.tag_btn {
   margin-left: 2px;
 }
 
@@ -1192,7 +1205,7 @@ button:focus {
   transition: all 0.2s linear;
 }
 
-.blog_right_sidebar .author_widget .social_icon a + a {
+.blog_right_sidebar .author_widget .social_icon a+a {
   margin-left: 20px;
 }
 
@@ -1229,7 +1242,7 @@ button:focus {
   margin-bottom: 0px;
 }
 
-.blog_right_sidebar .popular_post_widget .post_item + .post_item {
+.blog_right_sidebar .popular_post_widget .post_item+.post_item {
   margin-top: 20px;
 }
 
@@ -1251,7 +1264,7 @@ button:focus {
   margin-bottom: 0px;
 }
 
-.blog_right_sidebar .post_category_widget .cat-list li + li {
+.blog_right_sidebar .post_category_widget .cat-list li+li {
   padding-top: 15px;
 }
 
@@ -1609,9 +1622,11 @@ button:focus {
   .comments-area .comment-list .single-comment h5 {
     font-size: 12px;
   }
+
   .comments-area .comment-list .single-comment .date {
     font-size: 11px;
   }
+
   .comments-area .comment-list .single-comment .comment {
     font-size: 10px;
   }
@@ -1752,7 +1767,7 @@ button:focus {
 
 .comment-form .primary-btn:hover {
   border-color: #f3c300 !important;
-  color: #fff  !important;
+  color: #fff !important;
 }
 
 /*============ End Blog Single Styles  =============*/
