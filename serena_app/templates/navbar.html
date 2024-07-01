@@ -33,13 +33,14 @@
                     <li class="nav-item"><a class="nav-link" href="{%static 'gallery.html' %}">Gallery</a></li>
                     <li class="nav-item submenu dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                            aria-haspopup="true" aria-expanded="false">Blog</a>
+                            aria-haspopup="true" aria-expanded="false">Category</a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Grande Salle' %}">Grande Salle</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Chambre V.I.P' %}">Chambre V.I.P</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Chambre R' %}">Chambre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Restaurant-R' %}">Restaurant</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{% static 'elements.html' %}">Elemests</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% static 'contact.html' %}">Contact</a></li>
                 </ul>
             </div>

@@ -22,4 +22,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('serena_app.urls')),
+    path('reserver/', include('reserver.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
