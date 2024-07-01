@@ -60,8 +60,8 @@
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">
-                            $ <strike>{{ product.price }}</strike> &nbsp; $ {{ product.sale_price }}
-                            <small class="text-muted fw-light">/mo</small>
+                            $ <strike>{{ product.price }}</strike> &nbsp; {{ product.sale_price }}
+                            <small class="text-muted fw-light"> $</small>
                         </h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>30 users included</li>
@@ -71,6 +71,10 @@
                         </ul>
                         <a href="{% url 'reserver_summary' %}">
                             <button type="button" class="w-50 btn btn-lg btn-primary">Reservez</button></a>
+                        <br>
+                        <hr>
+                        <a href="{% url 'home' %}"><button type="button" value="{{ product.id }}"
+                                class="w-50 btn btn-lg btn-primary" id="reserver-add">Accueille</button></a>
                     </div>
                 </div>
             </div>
@@ -92,8 +96,8 @@
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">
-                            $ {{ product.price }}
-                            <small class="text-muted fw-light">/mo</small>
+                            {{ product.price }}
+                            <small class="text-muted fw-light"> $</small>
                         </h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>30 users included</li>
@@ -101,8 +105,12 @@
                             <li>Phone and email support</li>
                             <li>Help center access</li>
                         </ul>
-                        <a href="{% url 'reserver_summary' %}"><button type="button"
-                                class="w-100 btn btn-lg btn-primary">Contact us</button></a>
+                        <a href="#">
+                            <button type="button" class="w-50 btn btn-lg btn-primary">Reservez</button></a>
+                        <br>
+                        <hr>
+                        <a href="{% url 'home' %}"><button type="button" value="{{ product.id }}"
+                                class="w-50 btn btn-lg btn-primary" id="reserver-add">Accueille</button></a>
                     </div>
                 </div>
             </div>
@@ -110,6 +118,32 @@
     </div>
 
     {% endif %}
+
+    <script>
+        // check if button pressed
+        $(document).on('click', '#reserver-add', function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: '{% url "reserver_add" %}',
+                data: {
+                    product_id: $('#reserver-add').val(),
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    action: 'post'
+                },
+
+                success: function (json) {
+                    //console.log(json)
+                    document.getElementById("cart_quantity").textContent = json.qty
+                },
+
+                error: function (xhr, errmsg, err) {
+
+                }
+            });
+
+        })
+    </script>
 
     <div class="b-example-divider"></div>
 

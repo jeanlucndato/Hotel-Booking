@@ -5,8 +5,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
 
-            <a class="navbar-brand logo_h" href="{% url 'home' %}"><img src="{%static 'image/Logo.png' %}"
-                    alt=""></a>
+            <a class="navbar-brand logo_h" href="{% url 'home' %}"><img src="{%static 'image/Logo.png' %}" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
@@ -18,32 +17,36 @@
                 <ul class="nav navbar-nav menu_nav ml-auto">
                     <li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About us</a></li>
-                {% if user.is_authenticated %}:
+                    {% if user.is_authenticated %}:
                     <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
 
-                {% else %}:
+                    {% else %}:
                     <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Enregistre</a></li>
-                {% endif %}
-                    
+                    {% endif %}
 
 
-                    <li class="nav-item"><a class="nav-link" href="{% static 'accomodation.html' %}">Accomodation</a>
-                    </li>
+
                     <li class="nav-item"><a class="nav-link" href="{%static 'gallery.html' %}">Gallery</a></li>
                     <li class="nav-item submenu dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                             aria-haspopup="true" aria-expanded="false">Category</a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Grande Salle' %}">Grande Salle</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Chambre V.I.P' %}">Chambre V.I.P</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Chambre R' %}">Chambre</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Restaurant-R' %}">Restaurant</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Grande Salle' %}">Grande
+                                    Salle</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Chambre V.I.P' %}">Chambre
+                                    V.I.P</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'category' 'Chambre R' %}">Chambre</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="{% url 'category' 'Restaurant-R' %}">Restaurant</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="{% static 'contact.html' %}">Contact</a></li>
                 </ul>
             </div>
+            <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart_quantity"> {{ reserver|length }}</span>
+
         </nav>
     </div>
 </header>
